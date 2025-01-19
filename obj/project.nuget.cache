@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "dyl6y/N6lgA=",
+  "success": true,
+  "projectFilePath": "C:\\Dev\\YouTubeCloud\\RamadanFlashcardsWeb\\RamadanFlashcardsWeb.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\g_alf\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

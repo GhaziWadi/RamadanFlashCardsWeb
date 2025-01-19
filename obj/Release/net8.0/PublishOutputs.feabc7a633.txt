@@ -1,0 +1,8 @@
+C:\Dev\YouTubeCloud\RamadanFlashcardsWeb\publish\RamadanFlashcardsWeb.exe
+C:\Dev\YouTubeCloud\RamadanFlashcardsWeb\publish\appsettings.Development.json
+C:\Dev\YouTubeCloud\RamadanFlashcardsWeb\publish\appsettings.json
+C:\Dev\YouTubeCloud\RamadanFlashcardsWeb\publish\RamadanFlashcardsWeb.dll
+C:\Dev\YouTubeCloud\RamadanFlashcardsWeb\publish\RamadanFlashcardsWeb.deps.json
+C:\Dev\YouTubeCloud\RamadanFlashcardsWeb\publish\RamadanFlashcardsWeb.runtimeconfig.json
+C:\Dev\YouTubeCloud\RamadanFlashcardsWeb\publish\RamadanFlashcardsWeb.pdb
+C:\Dev\YouTubeCloud\RamadanFlashcardsWeb\publish\Newtonsoft.Json.dll

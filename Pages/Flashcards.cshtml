@@ -1,0 +1,69 @@
+@page
+@model RamadanFlashcardsWeb.Pages.FlashcardsModel
+
+<h1 style="text-align:center;">Ramadan Flashcards</h1>
+
+<div id="flashcard-container"> 
+    <div class="flashcard">
+        <p id="QuestionArabic"></p>
+        <p id="QuestionEnglish"></p>
+           <p id="AnswerArabic" style="display:none;"></p>
+        <p id="AnswerEnglish" style="display:none;"></p>
+        <button onclick="showAnswer()">Show Answer</button>
+        <button onclick="hideAnswer()" style="display:none;">Hide Answer</button>
+    </div>
+    <div class="navigation">
+        <button onclick="previousFlashcard()">Previous</button>
+        <button onclick="nextFlashcard()">Next</button>
+    </div>
+</div>
+
+<script>
+    var flashcards = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Flashcards));
+    var currentIndex = 0;
+
+    function loadFlashcard(index) {
+        document.getElementById('QuestionArabic').innerText = flashcards[index].QuestionArabic;
+        document.getElementById('AnswerArabic').innerText = flashcards[index].AnswerArabic;
+        document.getElementById('AnswerEnglish').style.display = 'none';
+        document.getElementById('QuestionArabic').innerText = flashcards[index].QuestionArabic;
+        document.getElementById('AnswerArabic').innerText = flashcards[index].AnswerArabic;    
+        document.getElementById('QuestionEnglish').innerText = flashcards[index].QuestionEnglish;
+        document.getElementById('AnswerEnglish').innerText = flashcards[index].AnswerEnglish;
+        document.getElementById('AnswerEnglish').style.display = 'none';
+        document.querySelector('button[onclick="showAnswer()"]').style.display = 'inline-block';
+        document.querySelector('button[onclick="hideAnswer()"]').style.display = 'none';
+    }
+
+    function showAnswer() {
+        document.getElementById('AnswerArabic').style.display = 'block';
+        document.getElementById('AnswerEnglish').style.display = 'block';
+        document.querySelector('button[onclick="showAnswer()"]').style.display = 'none';
+        document.querySelector('button[onclick="hideAnswer()"]').style.display = 'inline-block';
+    }
+
+    function hideAnswer() {
+           document.getElementById('AnswerArabic').style.display = 'none';
+        document.getElementById('AnswerEnglish').style.display = 'none';
+        document.querySelector('button[onclick="showAnswer()"]').style.display = 'inline-block';
+        document.querySelector('button[onclick="hideAnswer()"]').style.display = 'none';
+    }
+
+    function previousFlashcard() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            loadFlashcard(currentIndex);
+        }
+    }
+
+    function nextFlashcard() {
+        if (currentIndex < flashcards.length - 1) {
+            currentIndex++;
+            loadFlashcard(currentIndex);
+        }
+    }
+
+    window.onload = function() {
+        loadFlashcard(currentIndex);
+    }
+</script>
